@@ -1,0 +1,2 @@
+web: PORT=3001 npm --cwd client start
+api: PORT=3000 bin/rails server -b 0.0.0.0
