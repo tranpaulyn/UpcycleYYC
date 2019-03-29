@@ -12,7 +12,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:3000/api/drinks')
+    axios.get('/api/drinks')
       .then(response => response.json())
       .then(json => console.log(json))
       .catch(error => console.log(error));
