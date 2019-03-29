@@ -4,6 +4,11 @@ import './App.css';
 import axios from 'axios'
 
 class App extends Component {
+  constructor () {
+    super()
+    this.state = {}
+  }
+
   componentDidMount() {
     axios.get('http://localhost:3000/api/drinks')
       .then(response => response.json())
@@ -28,6 +33,8 @@ class App extends Component {
             Learn React
           </a>
         </header>
+        <h1>This is something cool?</h1>
+        <p>Paulyn was here</p>
       </div>
     );
   }

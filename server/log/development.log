@@ -874,3 +874,136 @@ Processing by DrinksController#index as HTML
 Completed 200 OK in 8ms (Views: 0.4ms | ActiveRecord: 2.7ms)
 
 
+Started GET "/api/drinks" for 10.0.2.2 at 2019-03-29 04:53:50 +0000
+Processing by DrinksController#index as HTML
+  [1m[36mDrink Load (10.1ms)[0m  [1m[34mSELECT id, title FROM "drinks"[0m
+  ↳ app/controllers/drinks_controller.rb:8
+Completed 200 OK in 20ms (Views: 0.2ms | ActiveRecord: 10.1ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-03-29 04:53:56 +0000
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.5/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.5/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (25.6ms)
+Completed 200 OK in 34ms (Views: 30.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/drinks" for 127.0.0.1 at 2019-03-29 05:05:21 +0000
+Processing by DrinksController#index as HTML
+  [1m[36mDrink Load (3.8ms)[0m  [1m[34mSELECT id, title FROM "drinks"[0m
+  ↳ app/controllers/drinks_controller.rb:8
+Completed 200 OK in 10ms (Views: 0.2ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/api/drinks" for 10.0.2.2 at 2019-03-29 05:05:50 +0000
+Processing by DrinksController#index as HTML
+  [1m[36mDrink Load (2.0ms)[0m  [1m[34mSELECT id, title FROM "drinks"[0m
+  ↳ app/controllers/drinks_controller.rb:8
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/api" for 127.0.0.1 at 2019-03-29 05:06:16 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/api"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/api/drinks" for 127.0.0.1 at 2019-03-29 05:06:20 +0000
+Processing by DrinksController#index as HTML
+  [1m[36mDrink Load (2.6ms)[0m  [1m[34mSELECT id, title FROM "drinks"[0m
+  ↳ app/controllers/drinks_controller.rb:8
+Completed 200 OK in 10ms (Views: 0.3ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/api/drinks/1" for 127.0.0.1 at 2019-03-29 05:07:07 +0000
+Processing by DrinksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDrink Load (1.6ms)[0m  [1m[34mSELECT  "drinks".* FROM "drinks" WHERE "drinks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/drinks_controller.rb:45
+  [1m[36mCACHE Drink Load (0.1ms)[0m  [1m[34mSELECT  "drinks".* FROM "drinks" WHERE "drinks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/drinks_controller.rb:13
+  [1m[36mIngredient Load (3.8ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."drink_id" = ?[0m  [["drink_id", 1]]
+  ↳ app/controllers/drinks_controller.rb:14
+Completed 200 OK in 115ms (Views: 0.2ms | ActiveRecord: 15.3ms)
+
+
+Started GET "/api/drinks/1" for 127.0.0.1 at 2019-03-29 05:14:29 +0000
+Processing by DrinksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDrink Load (1.8ms)[0m  [1m[34mSELECT  "drinks".* FROM "drinks" WHERE "drinks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/drinks_controller.rb:45
+  [1m[36mCACHE Drink Load (0.0ms)[0m  [1m[34mSELECT  "drinks".* FROM "drinks" WHERE "drinks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/drinks_controller.rb:13
+  [1m[36mIngredient Load (2.5ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."drink_id" = ?[0m  [["drink_id", 1]]
+  ↳ app/controllers/drinks_controller.rb:14
+Completed 200 OK in 14ms (Views: 0.3ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/api/drinks/" for 127.0.0.1 at 2019-03-29 05:14:34 +0000
+Processing by DrinksController#index as HTML
+  [1m[36mDrink Load (3.0ms)[0m  [1m[34mSELECT id, title FROM "drinks"[0m
+  ↳ app/controllers/drinks_controller.rb:8
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/api/drinks" for 10.0.2.2 at 2019-03-29 05:14:45 +0000
+Processing by DrinksController#index as HTML
+  [1m[36mDrink Load (3.1ms)[0m  [1m[34mSELECT id, title FROM "drinks"[0m
+  ↳ app/controllers/drinks_controller.rb:8
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/api/drinks" for 10.0.2.2 at 2019-03-29 05:15:21 +0000
+Processing by DrinksController#index as HTML
+  [1m[36mDrink Load (2.0ms)[0m  [1m[34mSELECT id, title FROM "drinks"[0m
+  ↳ app/controllers/drinks_controller.rb:8
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/api/drinks" for 10.0.2.2 at 2019-03-29 05:16:21 +0000
+Processing by DrinksController#index as HTML
+  [1m[36mDrink Load (4.4ms)[0m  [1m[34mSELECT id, title FROM "drinks"[0m
+  ↳ app/controllers/drinks_controller.rb:8
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/api/drinks" for 127.0.0.1 at 2019-03-29 05:16:34 +0000
+Processing by DrinksController#index as HTML
+  [1m[36mDrink Load (2.4ms)[0m  [1m[34mSELECT id, title FROM "drinks"[0m
+  ↳ app/controllers/drinks_controller.rb:8
+Completed 200 OK in 10ms (Views: 0.2ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/api/drinks" for 10.0.2.2 at 2019-03-29 05:23:31 +0000
+Processing by DrinksController#index as HTML
+  [1m[36mDrink Load (8.3ms)[0m  [1m[34mSELECT id, title FROM "drinks"[0m
+  ↳ app/controllers/drinks_controller.rb:8
+Completed 200 OK in 13ms (Views: 0.3ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/api/drinks" for 10.0.2.2 at 2019-03-29 05:29:34 +0000
+Processing by DrinksController#index as HTML
+  [1m[36mDrink Load (2.5ms)[0m  [1m[34mSELECT id, title FROM "drinks"[0m
+  ↳ app/controllers/drinks_controller.rb:8
+Completed 200 OK in 17ms (Views: 3.2ms | ActiveRecord: 2.5ms)
+
+
