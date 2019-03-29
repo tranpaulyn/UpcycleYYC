@@ -33,9 +33,6 @@ class Signup extends React.Component {
                     </form>
                 </div>
                 </Route>          
-                <Route path='/login'>
-                    <h1>Login</h1>
-                </Route> 
             </div>
             </Router>
             

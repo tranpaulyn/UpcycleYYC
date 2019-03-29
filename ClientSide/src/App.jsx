@@ -4,6 +4,7 @@ import { Route, Switch } from 'react-router-dom';
 import Home from './Home.jsx';
 import Signup from './Signup.jsx'
 import Add from './Add_Item.jsx'
+import LoginForm from './Login.jsx'
 
 class App extends Component {
   constructor () {
@@ -21,11 +22,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-      ksdhfsjdfksljflkj
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/signup" component={Signup} />
           <Route exact path="/add" component={Add} />
+          <Route exact path='/login' component={LoginForm}/>
         </Switch>
       </div>
     );
