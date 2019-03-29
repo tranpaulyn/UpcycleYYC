@@ -2,11 +2,10 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import axios from 'axios'
-import config from './config'
 
 class App extends Component {
   componentDidMount() {
-    window.fetch('/api/drinks')
+    axios.get('http://localhost:3000/api/drinks')
       .then(response => response.json())
       .then(json => console.log(json))
       .catch(error => console.log(error));
